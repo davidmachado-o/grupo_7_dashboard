@@ -1,11 +1,8 @@
-import "./App.css";
+//  http://localhost:3000/api/users/users
+import UserList from "./components/UserList";
 
 function App() {
-  return (
-    <div>
-      <h1>Numpy - Dashboard</h1>
-    </div>
-  );
+  return <UserList />;
 }
 
 export default App;
