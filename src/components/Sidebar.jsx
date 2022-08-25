@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="sidebar">
-      <ul className="nav flex-column">
+      <ul className="d-grid gap-2 d-md-block">
         <li className="nav-item">
           <Link to="/">Home</Link>
         </li>
