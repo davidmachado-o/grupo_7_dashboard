@@ -18,16 +18,16 @@ function Categories() {
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>#</th>
             <th>Nombre de la categoria</th>
+            <th>#</th>
             <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product) => (
             <tr key={product.id}>
+              <td>{product.category_id}</td>
               <td>{product.id}</td>
-              <td>{product.name}</td>
               <td>
                 <Button variant="danger">Eliminar</Button>
               </td>
