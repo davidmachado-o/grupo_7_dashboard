@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -38,9 +38,17 @@ function Products() {
               <td>{product.description}</td>
               <td>{product.category_id}</td>
               <td>{product.stock}</td>
-              <td><Button variant="success" disabled>${product.price_current}</Button></td>
-              <td><Button variant="primary">Editar</Button></td>
-              <td><Button variant="danger">Eliminar</Button></td>
+              <td>
+                <Button variant="success" disabled>
+                  ${product.price_current}
+                </Button>
+              </td>
+              <td>
+                <Button variant="primary">Editar</Button>
+              </td>
+              <td>
+                <Button variant="danger">Eliminar</Button>
+              </td>
             </tr>
           ))}
         </tbody>
