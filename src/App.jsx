@@ -1,12 +1,13 @@
+import { BrowserRouter as Router} from "react-router-dom";
 import UserList from "./components/UserList";
 import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Sidebar />
       <UserList />
-    </div>
+    </Router>
   );
 }
 

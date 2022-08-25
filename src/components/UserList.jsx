@@ -13,7 +13,7 @@ function UserList() {
   }, []);
 
   return (
-    <div>
+    <div className="container mt-5">
       <h1>Users</h1>
       <p>
         {users.map((user) => (
