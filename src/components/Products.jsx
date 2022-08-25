@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
+import Button from 'react-bootstrap/Button';
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -22,7 +23,10 @@ function Products() {
             <th>#</th>
             <th>Nombre del producto</th>
             <th>Descripcion</th>
+            <th>Categoria</th>
             <th>Precio</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -31,15 +35,12 @@ function Products() {
               <td>{product.id}</td>
               <td>{product.name}</td>
               <td>{product.description}</td>
-              <td>${product.price_current}</td>
+              <td>{product.category_id}</td>
+              <td><Button variant="success">${product.price_current}</Button></td>
+              <td><Button variant="primary">Editar</Button></td>
+              <td><Button variant="danger">Eliminar</Button></td>
             </tr>
           ))}
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
         </tbody>
       </Table>
     </div>
