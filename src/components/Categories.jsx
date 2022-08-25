@@ -14,27 +14,92 @@ function Categories() {
   }, []);
   return (
     <div className="container mt-5">
-      <h1>Categorias</h1>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>Nombre de la categoria</th>
-            <th>#</th>
-            <th>Eliminar</th>
+            <th>Categoria</th>
+            <th>Total de productos</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product) => (
             <tr key={product.id}>
-              <td>{product.category_id}</td>
-              <td>{product.id}</td>
-              <td>
-                <Button variant="danger">Eliminar</Button>
-              </td>
+              <td></td>
+              <td></td>
             </tr>
           ))}
         </tbody>
       </Table>
+
+
+      {products.filter((product) => (
+        product.category_id === "Mouse")
+      ) ? (
+        <h1>Mouse: {products.filter((product) => (
+          product.category_id === "Mouse")
+        ).length}</h1>
+
+      ) : (
+        <h1>No hay productos</h1>
+      )}
+
+      {products.filter((product) => (
+        product.category_id === "Teclado")
+      ) ? (
+        <h1>Teclado: {products.filter((product) => (
+          product.category_id === "Teclado")
+        ).length}</h1>
+
+      ) : (
+        <h1>No hay productos</h1>
+      )}
+
+      {products.filter((product) => (
+        product.category_id === "Monitor")
+      ) ? (
+        <h1>Monitor: {products.filter((product) => (
+          product.category_id === "Monitor")
+        ).length}</h1>
+
+      ) : (
+        <h1>No hay productos</h1>
+      )}
+
+      {products.filter((product) => (
+        product.category_id === "Silla")
+      ) ? (
+        <h1>Silla: {products.filter((product) => (
+          product.category_id === "Silla")
+        ).length}</h1>
+
+      ) : (
+        <h1>No hay productos</h1>
+      )}
+
+      {products.filter((product) => (
+        product.category_id === "Procesador")
+      ) ? (
+        <h1>Procesador: {products.filter((product) => (
+          product.category_id === "Procesador")
+        ).length}</h1>
+
+      ) : (
+        <h1>No hay productos</h1>
+      )}
+
+      {products.filter((product) => (
+        product.category_id === "Combo")
+      ) ? (
+        <h1>Combo: {products.filter((product) => (
+          product.category_id === "Combo")
+        ).length}</h1>
+
+      ) : (
+        <h1>No hay productos</h1>
+      )}
+
+      
+
     </div>
   );
 }
