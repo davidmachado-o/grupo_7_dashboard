@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Table from "react-bootstrap/Table";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -15,14 +16,32 @@ function Products() {
   return (
     <div className="container mt-5">
       <h1>Products</h1>
-      <p>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - ${product.price_current}
-            <p>{product.description}</p>
-          </li>
-        ))}
-      </p>
+      <Table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre del producto</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => (
+            <tr key={product.id}>
+              <td>{product.id}</td>
+              <td>{product.name}</td>
+              <td>{product.description}</td>
+              <td>${product.price_current}</td>
+            </tr>
+          ))}
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </Table>
     </div>
   );
 }
