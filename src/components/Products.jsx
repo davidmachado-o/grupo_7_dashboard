@@ -24,6 +24,7 @@ function Products() {
             <th>Nombre del producto</th>
             <th>Descripcion</th>
             <th>Categoria</th>
+            <th>Stock</th>
             <th>Precio</th>
             <th>Editar</th>
             <th>Eliminar</th>
@@ -36,7 +37,8 @@ function Products() {
               <td>{product.name}</td>
               <td>{product.description}</td>
               <td>{product.category_id}</td>
-              <td><Button variant="success">${product.price_current}</Button></td>
+              <td>{product.stock}</td>
+              <td><Button variant="success" disabled>${product.price_current}</Button></td>
               <td><Button variant="primary">Editar</Button></td>
               <td><Button variant="danger">Eliminar</Button></td>
             </tr>
