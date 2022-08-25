@@ -14,6 +14,9 @@ function Sidebar() {
         <li className="nav-item">
           <Link to="/products">Productos</Link>
         </li>
+        <li className="nav-item">
+          <Link to="/categories">Categorias</Link>
+        </li>
       </ul>
     </div>
   );

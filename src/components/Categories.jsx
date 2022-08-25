@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
+import { Table, Button } from "react-bootstrap";
 
-function Products() {
+function Categories() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -13,20 +12,14 @@ function Products() {
     }
     fetchProducts();
   }, []);
-
   return (
     <div className="container mt-5">
-      <h1>Total de productos: {products.length}</h1>
+      <h1>Categorias</h1>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
             <th>#</th>
-            <th>Nombre del producto</th>
-            <th>Descripcion</th>
-            <th>Categoria</th>
-            <th>Stock</th>
-            <th>Precio</th>
-            <th>Editar</th>
+            <th>Nombre de la categoria</th>
             <th>Eliminar</th>
           </tr>
         </thead>
@@ -35,17 +28,6 @@ function Products() {
             <tr key={product.id}>
               <td>{product.id}</td>
               <td>{product.name}</td>
-              <td>{product.description}</td>
-              <td>{product.category_id}</td>
-              <td>{product.stock}</td>
-              <td>
-                <Button variant="success" disabled>
-                  ${product.price_current}
-                </Button>
-              </td>
-              <td>
-                <Button variant="primary">Editar</Button>
-              </td>
               <td>
                 <Button variant="danger">Eliminar</Button>
               </td>
@@ -57,4 +39,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Categories;
