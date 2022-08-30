@@ -17,6 +17,9 @@ function Sidebar() {
         <li className="nav-item">
           <Link to="/categories">Categorias</Link>
         </li>
+        <li className="nav-item">
+          <Link to="/profile">Perfil</Link>
+        </li>
       </ul>
     </div>
   );

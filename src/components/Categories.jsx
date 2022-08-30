@@ -14,7 +14,7 @@ function Categories() {
   }, []);
   return (
     <div className="container mt-5">
-      <h1>Total de categorias: </h1>
+      <h1>Total de categorias: 6</h1>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
