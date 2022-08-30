@@ -20,6 +20,9 @@ function Sidebar() {
         <li className="nav-item">
           <Link to="/profile">Perfil</Link>
         </li>
+        <li className="nav-item">
+          <Link to="/lastproduct">Último producto creado</Link>
+        </li>
       </ul>
     </div>
   );
