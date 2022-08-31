@@ -14,7 +14,25 @@ function LastProductCreated() {
   
     return (
         <>
-        <div>Último producto creado</div>
+        <h2>Último producto creado</h2>
+        <ul>
+            {lastCreated.filter((product, index) => index === lastCreated.length - 1).map((product) => (
+                <li key={product.id}>
+                    <h3>{product.name}</h3>
+                    <p>{product.description}</p>
+                    <p>{product.price}</p>
+                    <p>Agregado: {
+                        new Date(product.created_date).toLocaleDateString("es-AR", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                        })
+                    }</p>
+                </li>
+
+            ))}
+        </ul>
+
         </>
     );
     }
