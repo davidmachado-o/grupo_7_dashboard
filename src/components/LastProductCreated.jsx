@@ -15,7 +15,7 @@ function LastProductCreated() {
     return (
         <>
         <h2>Último producto creado</h2>
-        <ul>
+        <ul className= "list-group text-center">
             {lastCreated.filter((product, index) => index === lastCreated.length - 1).map((product) => (
                 <li key={product.id}>
                     <h3>{product.name}</h3>

@@ -2,8 +2,8 @@ import CardInfo from './CardInfo';
 
 function Home () {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="container">
+            <h1 className='text-center mt-5'>Dashboard</h1>
         <CardInfo />
         </div>
         );

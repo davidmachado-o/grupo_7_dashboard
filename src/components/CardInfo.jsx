@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 function CardInfo() {
   return (
-    <div className="justify-content-around">
+    <div className="justify-content-around d-flex">
       <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>Bienvenido al Dashboard de Numpy</Card.Title>
@@ -13,7 +13,7 @@ function CardInfo() {
           <Card.Text>
             Podés visitar el sitio web desde este link:
           </Card.Text>
-          <Button variant="success" href="http://localhost:3000/">Numpy</Button>
+          <Button variant="success" href="http://localhost:3000/" target="_blank">Ir a Numpy!</Button>
         </Card.Body>
       </Card>
     </div>
