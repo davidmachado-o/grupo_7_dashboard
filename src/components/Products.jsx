@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 
@@ -44,7 +45,9 @@ function Products() {
                 </Button>
               </td>
               <td>
+              <Link to={`/products/${product.id}`}>
                 <Button variant="primary">Editar</Button>
+              </Link>
               </td>
               <td>
                 <Button variant="danger">Eliminar</Button>
