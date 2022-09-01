@@ -26,7 +26,7 @@ function UserList() {
     // </div>
     <div className="container mt-5">
       <h1>Total de usuarios: {users.length}</h1>
-      <Table striped bordered hover variant="dark">
+      <Table responsive striped bordered hover variant="dark">
         <thead>
           <tr>
             <th>#</th>
