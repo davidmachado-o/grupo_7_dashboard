@@ -8,6 +8,7 @@ import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
 import LastProductCreated from "./components/LastProductCreated";
 import EditProduct from "./components/EditProduct";
+import LastUserCreated from "./components/LastUserCreated";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products" exact element={<Products />} />
           <Route path="/categories" exact element={<Categories />} />
           <Route path="/lastproduct" exact element={<LastProductCreated />} />
+          <Route path="/lastuser" element={<LastUserCreated />} />
           <Route path="/products/:id" element={<EditProduct />} />
         </Routes>
       </>

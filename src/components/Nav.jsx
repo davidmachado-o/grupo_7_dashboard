@@ -35,6 +35,11 @@ function Nav() {
             Último producto creado
           </Link>
         </li>
+        <li>
+          <Link to="/lastuser" className="nav-link link-dark">
+            Último usuario creado
+          </Link>
+        </li>
       </ul>
     </div>
   );
