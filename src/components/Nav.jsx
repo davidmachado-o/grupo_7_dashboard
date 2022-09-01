@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/numpy-02.png";
 
 function Nav() {
-  // make a sidebar navigation
   return (
     <div className="d-flex flex-column flex-shrink-0 p-3 bg-light">
       <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <span className="fs-4">Numpy</span>
+            <img className="logo" src={logo} alt="Logo" />
       </Link>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
